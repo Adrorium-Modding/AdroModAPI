@@ -1,0 +1,40 @@
+<Project>
+    <PropertyGroup>
+        <GameVersion>v0.11.0</GameVersion>
+    </PropertyGroup>
+
+    <ItemGroup Condition="Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies')">
+        <Reference Include="Assembly-CSharp"
+            HintPath="$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies/Assembly-CSharp.dll"
+            Private="False" ExcludeAssets="RUNTIME" Publicize="True" />
+
+        <Reference Include="Assembly-CSharp-firstpass"
+            HintPath="$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies/Assembly-CSharp-firstpass.dll"
+            Private="False" ExcludeAssets="RUNTIME" Publicize="True" />
+    </ItemGroup>
+
+    <ItemGroup
+        Condition="!Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies') And Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/assemblies')">
+        <Reference Include="Assembly-CSharp"
+            HintPath="$(MSBuildThisFileDirectory)/game/$(GameVersion)/assemblies/Assembly-CSharp.dll"
+            Private="False" ExcludeAssets="RUNTIME" Publicize="True" />
+
+        <Reference Include="Assembly-CSharp-firstpass"
+            HintPath="$(MSBuildThisFileDirectory)/game/$(GameVersion)/assemblies/Assembly-CSharp-firstpass.dll"
+            Private="False" ExcludeAssets="RUNTIME" Publicize="True" />
+    </ItemGroup>
+
+    <Target Name="CheckForAssemblies">
+        <Error
+            Condition="!Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies') And !Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/assemblies')"
+            Text="Could not find game assemblies for version $(GameVersion)!" />
+
+        <Message
+            Condition="Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies')"
+            Text="Found game assemblies for $(GameVersion) at '$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies'!" />
+
+        <Message
+            Condition="!Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/raw_assemblies') And Exists('$(MSBuildThisFileDirectory)/game/$(GameVersion)/assemblies')"
+            Text="Found game assemblies for $(GameVersion) at '$(MSBuildThisFileDirectory)/game/$(GameVersion)/assemblies'!" />
+    </Target>
+</Project>

@@ -1,0 +1,380 @@
+Adrorium v0.11.0(Colossal Update) Changelog
+=>Main features:
+	- Automaton
+	- PDA designer
+	- New progression system
+	- Asteroids everywhere
+	- 45 new tank blocks
+	- 9 new gatlings
+	- 9 new rocket launchers
+	- 9 new boosters
+	- 9 new rcs blocks
+	- New main ship: Canigva
+	- Inventory fetching V2 (MP)
+	- More modding options
+	- Rewrite for most of the code
+	- 5 new metals
+	- Crafting areas
+	- Orbit mechanics
+	- Automated ship firing
+	- Simplified many recipes
+	- 4 times bigger planets
+
+
+-rewrote the planet height calculation
+-added interpreted language planet height calculator
+-optimized planet height calculator
+-updated version info
+-made buttons change image when pressed
+-reorganized buttons on tactical console
+-rewrote the turret firing code
+-rewrote how turrets store properties
+-implemented new sequential fire system
+-added auto target hostile
+-added auto switch target on disable
+-new buttons for for electronics console
+-implemented auto redistribute shields
+-implemented auto fire
+-made planets 4 times bigger
+-updated sector and planet size options
+-limited deceleration to <1km height
+-added orbit info to drive ui
+-implemented new pda ship designer
+-added racing cart
+-allowed any rotation for item holder
+-corrected untill and 'get read of' typos
+-removed fertile soil from campaign
+-fixed shift crafting not working while crouched
+-corrected "plasantly" from namium juice
+-fixed cockpit overlap when building
+-fixed spawning white cubes by pressing p
+-maxed stats in tutorial from time to time
+-corrected 'rezistors' and 'propertyes'
+-increased max chat length from 64 to 256
+-fixed chat prevented gravity for player
+-corrected 'pored' typo in furnace
+-corrected "though", "awafully suspicios", "frined"
+-corrected "nevermind", "awls" and "wander"
+-corrected "alo"  typo in crensel cake
+-corrected "coocked" typo in nurins
+-corrected "prepelled" in ammo description
+-made "(s)" on missions show only when count>1
+-removed double spaces from mainframe
+-removed double spaces from battery
+-corrected "sepparating" from autodoor
+-corrected efective, verry, powerfull from r.l.
+-corrected "Depleated" in Depleted battery
+-added crouchspeedmulty to modding api
+-added planet height code to modding api
+-added block ability to consume secondary ammo
+-nerfed railgun consumption
+-added energy consumption per shoot for all weapons
+-added turret properties data to modding api doc
+-corrected 'he' typo in plasma cannon item
+-implemented design saving for pda
+-made designer buttons hide depending no mode
+-added ship class info on pda designer
+-fixed comma formatting for some languages
+-corrected 10mm to 33mm typo in rifle and receiver
+-corrected "Electricall" typo in wire item
+-corrected double space in iron tip description
+-nerfed station wall dismantling
+-corrected "hovered" in keybind
+-removed damagedelectronics & fabric from loot
+-removed plasticscraps & integratedcircuits
+-corrected "signall" typo in missions
+-doubled copper obtained from scrapping
+-corrected staion, servicess, comute from missions
+-implemented design saving for pda designer
+-implemented save as new for pda designer
+-prevented auto fire for out of range targets
+-added deck clearing for pda designer
+-added create new design for the pda designer
+-added batteries and solar panels to all bases
+-fixed drones and bases not firing
+-made planet bases and drones not fire sequential
+-made projectiles hit ground
+-fixed dismantle container crash on mp
+-prototype for pda designer data structure
+-optimizations for designer data structures
+-fixed ship mesh and ship image memory leak
+-added design deletion for the pda designer
+-fixed atmo decelerating not working
+-fixed lift camera shake for other players
+-fixed ship design from cockpit not updated
+-increased stored energy for turbines
+-added deck deletion for pda designer
+-added deck moving up/down for pda designer
+-added deck adding for pda designer
+-added design loading for pda designer
+-added planner mode for pda designer
+-added planned design saving for pda designer
+-added set as planned design for pda designer
+-fixed length overflow for pda designer
+-limited ships to 220x220 m via designer
+-added ship origin on pda designer
+-added forward indicator for pda designer
+-fixed deck adding error for pda designer
+-added indicator for main deck on pda designer
+-made pda ship design update realtime
+-made pda ship design be synced over mp
+-added crating area blocks
+-moved some recipes in tabs
+-added alternative large coil recipe
+-corrected 2 waves to all waves in manual entry
+-implemented crafting areas access crafters
+-made player access crafting area crafters
+-added ui icons for available crafters
+-updated the controls for the joystick
+-rewrote the key binding data structures
+-fixed memory leak for unfreed block data
+-fixed projectile error when hitting destroyed ship
+-fixed custom weapon aim overwritten by default ones
+-corrected 'begging of the game'(beginning)
+-corrected 'powerfull' typo in 5 places
+-corrected 'Extremly valiuble' in nuclear rods
+-corrected 'behaviour' in mission description
+-small tweak to manual entry for mp
+-made camera stop moving when exiting game
+-made 'shilds' fit into shields description
+-corrected 'auto break' on console
+-implemented spawnable asteroids
+-added reload weapon on empty mag only option
+-removed legacy projectile & component scripts
+-added saving and mp sync for spawnable asteroids
+-added damage for spawnable asteroids
+-corrected 'acces' typo in screwdriver description
+-fixed hardcoded booster index
+-implemented targeting for spawning asteroids
+-fixed untargetable spawned asteroid
+-prevented dropped ore from clipping through the ship
+-made asteroids disappear after destruction
+-implemented asteroid de/spawner routine
+-fixed hardcoded weapon indexes
+-fixed projectile bug with new asteroids
+-made blast door spawn a 2x2 breach instead of 1x2
+-made the spawn block on destroy use custom position
+-added spawn asteroid command
+-made grids modable
+-made grid prices modable
+-rewrote most of the mod loading code
+-rewrote vanilla and mod data merging
+-added new sandbox ship:canigva
+-changed campaign ship to litro
+-implemented modable crafting tabs
+-redesigned the tutorial ship
+-rewrote some of the asset validation code
+-implemented differential upgrade recipe
+-added 8 new boosters (including mega and colossal)
+-tweaks to new canigva ship
+-start with 120 patchplates in inventory
+-simplified booster recipe
+-tweaked some item positions in creative
+-new booster models, items & block data
+-simpler isinside & isoutside block data
+-scrap recipe by id instead of value for blocks
+-ui info for adjacent upgradable blocks
+-repurposed gallium to tungsten
+-made upgrading give back original ingredients
+-option for random give back recipe amounts
+-fixed destroyed boosters not showing on ui
+-added 5 new materials (items, recipes, images, models)
+-added new materials to all loot tables
+-added options for spawned asteroids at start
+-fixed crafters inaccessible when interacting with one
+-fixed duplicated suit on respawn
+-fixed a targeting error
+-fixed missing loot for asteroid
+-increased bauxite and nickel in asteroids
+-fixed auto shield redistribution not working
+-increased coins stack to 50k
+-made starting asteroids spawn 3k to 5k away
+-separated store/retrieve permission for blocks
+-made hook allow fetch but not store
+-added basic ship inv list in player ui
+-added pocket house
+-added iron plates to starting resources
+-fixed m brings map while typing
+-fixed fetching from ship overflow player inv
+-updated ship inventory ui
+-added ship inventory fill info to ship inv ui
+-added differential upgrade recipes for new blocks
+-added new ui images for inventory
+-redesigned the new inventory ui
+-migrated cargo ui to the new crafting ui
+-made f exit crafting and backpack
+-corrected availablesounds typo
+-rewrote player inventory screen from scratch
+-made f and tab close any inventory ui
+-new panels for delete and store items
+-new ui for inventory keybind info
+-added drop to store to ship inv zone in ui
+-fixed animations and sounds for new inventory ui
+-added 9 new rcs blocks (including mega & colossal)
+-added config data for new rcs blocks
+-removed legacy rcs and added prices
+-made adjacent upgrade be in relative space
+-made rcs exhaust modable
+-updated modding api with new rcs properties
+-modeled 9 new gatlings (mega and colossal included)
+-implemented true hierarchical block components
+-improved the animations for gatlings
+-made projectile spawn pos modable
+-added icons, configs and recipes for new gatlings
+-added 9 new oxygen tanks
+-made gatling bullets 2 times faster
+-fixed belt visible while driving
+-fixed targeting working without sensors
+-fixed invalid rcs trader item
+-fixed tank adjacent upgrade not working
+-added more end game materials at traders
+-3 times more carbon ore in asteroids
+-fixed speed(>0.1 Mm/s) incorrect formatting
+-fixed ammo not replenishing new gatlings
+-added recycle recipe for fabric
+-fixed incorrect item shown when storing to ship
+-fixed popup crafting panels hidden behind others
+-made railcone 2 times more expensive
+-fixed incorrect destroyed block for rcs & gatling
+-fixed incorrect destroyed block for boosters
+-increased cost for workstation crafting
+-made destroyed rcs not have rcs vfx
+-created all 3d models for the new fluid tanks
+-added collider data for new tanks
+-added models for xenon tanks
+-added recipes for the 45 new tanks
+-calculated prices for the 45 new tanks
+-added items for the 45 new tanks
+-wrote the config data for the new tanks
+-fixed tanks losing content on upgrade
+-added adjacent upgrade for new tanks
+-added xenon pouch and canister
+-fixed anc typo in mod api
+-prevented reloading while typing r in chat
+-removed damagedcpu and damagedmotherboard
+-removed scrap titanium and plastic wrapper
+-removed scrap iron from many blocks
+-fixed recipe output counts not updating
+-fixed craft ui visible when facing crafter
+-removed workstation from litro
+-made tank fill animation start from 0%
+-fixed store all items reset cargo inventory
+-corrected 'mes' typo in railcone description
+-fixed hardcoded apturret and npc indexes
+-made any block able to be apturret/npc
+-shown on ui items given for block dismantling
+-added 45 icons for the new tanks
+-nerfed the transformer(5 times less powerful)
+-completely removed scrapiron from blocks
+-updated the new tank images
+-increased recipe output for bio molecular materials
+-removed canister
+-removed radioactivegoop intermediate ingredient
+-fixed looking at npc prevents item dragging
+-simplified the food mission
+-fixed drones not firing when to close
+-increased explosive powder output from ores & recycling
+-started implementing item fetching v2 (multiplayer)
+-moved item fetching code from player to ship
+-option to drop/destroy 1 item instead of stack
+-added multiplayer storing for inv fetching v2
+-fixed drag storing not working
+-added mp retrieving for inv fetching v2
+-added mp crafting for inv fetching v2
+-added mp upgrading for inv fetching v2
+-added mp hull building for inv fetching v2
+-prevented text popups from overlapping
+-nerfed rocket fuel from mining
+-renamed dc motor to servo motor
+-fixed animation warning for eating
+-fixes for inventory fetching
+-fixes and tweaks for inventory fetching
+-added 9 new r.l. (item, model, block, recipe)
+-added images for the new r.l.
+-wrote basic automaton behavior
+-added model and animations for automaton;
+-added repair behavior for automation
+-added soul trap relic
+-added price, recipe & lod mode for automaton
+-removed legacy tank blocks and items
+-made automaton head track the player
+-fixed automaton stuck on destroyed blocks
+-made automaton rotate to walking direction
+-fixed fetching ingredients for recipe bug
+-added scrap & dismantle recipes for automaton
+-made automaton farm and rebuild
+-made empty bottle auto fetch before water pouch
+-added steel to reactor scrapping
+-fixed tank positioning on olmid
+-made death from thirst/starvation 5 times slower
+-added popup warnings for low water, food and sleep
+-added deck separator data to large tanks
+-fixed destroyed stage spawn on dismantle
+-fixed unable to control individual turrets
+-finished automaton rebuild, harvest & replant
+-nerfed gatling & rocket hull damage
+-fixed not getting aluminum when upgrading r.l.
+-fixed repair bar present after finished repairing
+-made ammo reload from end of belt
+-added more info to the manual
+-made hook guns fire sequential
+-made all new tiered blocks share same colors
+-removed gas patches
+-rewrote sector generation
+-prevented spawning in atmosphere
+-new sector map icons and orbits
+-new galaxy map icons
+-fixed incorrect rocket launcher color
+-lowered booster volume
+-added more invert mouse options
+-fixed door sfx not heard sometimes
+-tweaked airlock & auto door sfx
+-removed welder from traders
+-removed water and lava for now
+-allowed out of range fire
+-fixed unable to fire weapons from console
+-fixed firing animation not visible on client
+-fixed missing data from tactical cons. after rebuild
+-fixed mesh colors for smg and drill
+-fixed duplicated ship item list on reload
+-fixes for inventory fetching for multiplayer
+-fixed turret switching not working with new turrets
+-made automaton return to its original position
+-added automaton position to ui
+-added names to automatons
+-fixed rare incorrect cockpit button colors
+-made cockpit parent rotation on by default
+-fixed planned design not saved
+-made planned design synced with clients
+-allowed clients to breach hull of wreckages
+-fixed invisible design on cockpit/screen
+-updated ui with the latest info
+-fixed automaton name shown on top of inventory
+-corrected Poacket house typo
+-separated house and racing cart into a mod
+-fixed bug with loading resources causing warnings
+-made mods able to use images from resources as icons
+-fixed not enough plates for mission in tutorial
+-tweak for a tutorial mission text
+-fixed automaton could be built horizontally
+-made automaton face ship forward when idle
+-added new ship:manigvum
+-fixed automaton not giving back empty bottles
+-fixed t not opening chat
+-fixed warning on >2 players with inventory syncing
+-added more info to rover(fact that is bugged)
+-updated manigvum ship design
+-reduced steel required for reactor
+-changed first rcs limit mode to 5%
+-updated cockpit description
+-added . in window wall description
+-corrected 'light are on' in light switch
+-fixed missing ship image after rebuilding cockpit
+-fixed cargo popup when opening pda
+-fixed suit loss on death
+-renamed reincarnation pill to isekai pill
+-made planets spawn further away from the star
+-formatted the changelog
+-updated version info in ui
+-fixed losing suit on death
+-fixed spawning with no o2 in suit
