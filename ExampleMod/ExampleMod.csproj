@@ -29,6 +29,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\AdroModdingApi\AdroModdingApi.csproj" />
+    <ProjectReference Include="..\AdroModdingApi\AdroModdingApi.csproj" Private="False" ExcludeAssets="RUNTIME" />
   </ItemGroup>
 </Project>
