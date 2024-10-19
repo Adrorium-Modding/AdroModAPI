@@ -4,3 +4,6 @@ obj
 dist
 game/*/raw_assemblies
 game/raw
+.ignore
+**/ignore/*.cs
+Common.Local.props
